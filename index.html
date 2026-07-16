@@ -3,231 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sujal Donga | Data Science & AI Professional</title>
+    <title>Sujal Donga | Portfolio</title>
     
-    <!-- Custom SD Initials Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%232563eb%22/><text x=%2250%22 y=%2268%22 font-family=%22sans-serif%22 font-size=%2248%22 font-weight=%22bold%22 fill=%22white%22 text-anchor=%22middle%22>SD</text></svg>">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS -->
+    <!-- Tailwind & Icons -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Animate On Scroll (AOS) CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Font Awesome Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans antialiased overflow-x-hidden">
+<body class="min-h-screen p-4 md:p-8 text-black bg-[#60a5fa]">
 
-    <!-- Navigation -->
-    <nav class="bg-white shadow-sm py-4 sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
-            <h1 class="text-xl font-bold text-blue-600">Sujal Donga</h1>
-            <div class="hidden md:flex space-x-5 text-sm font-medium items-center">
-                <a href="#about" class="hover:text-blue-600 transition">About</a>
-                <a href="#experience" class="hover:text-blue-600 transition">Experience</a>
-                <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
-                <a href="#skills" class="hover:text-blue-600 transition mr-4">Skills</a>
-                
-                <!-- Social & Coding Links Grouped Together -->
-                <a href="https://github.com/sdpatel5201" target="_blank" class="hover:text-blue-600 transition text-gray-700" title="GitHub"><i class="fab fa-github text-lg"></i></a>
-                <a href="https://www.linkedin.com/in/sujal-donga-57b16326a/" target="_blank" class="hover:text-blue-600 transition text-gray-700" title="LinkedIn"><i class="fab fa-linkedin text-lg"></i></a>
-                <a href="#" target="_blank" class="hover:text-blue-600 transition text-gray-700" title="Kaggle"><i class="fab fa-kaggle text-lg"></i></a>
-                <a href="#" target="_blank" class="hover:text-blue-600 transition text-gray-700" title="LeetCode"><i class="fas fa-code text-lg"></i></a>
-                <a href="#" target="_blank" class="hover:text-blue-600 transition text-gray-700 mr-2" title="ResearchGate"><i class="fab fa-researchgate text-lg"></i></a>
-                
-                <a href="#contact" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">Contact Me</a>
-            </div>
+    <!-- Top Navigation Bar -->
+    <nav class="bg-[#a78bfa] border-4 border-black rounded-full neo-shadow-static mb-8 px-6 py-3 flex justify-between items-center max-w-7xl mx-auto sticky top-4 z-50">
+        <h1 class="text-2xl font-black italic tracking-widest text-white" style="-webkit-text-stroke: 1px black;">PORTFOLIO</h1>
+        
+        <div class="hidden md:flex space-x-6 font-bold text-sm">
+            <a href="#about" class="hover:underline decoration-4 underline-offset-4 decoration-black">ABOUT</a>
+            <a href="#projects" class="hover:underline decoration-4 underline-offset-4 decoration-black">PROJECTS</a>
+            <a href="#experience" class="hover:underline decoration-4 underline-offset-4 decoration-black">EXPERIENCE</a>
         </div>
+
+        <div class="bg-[#fde047] border-2 border-black rounded-full px-4 py-1 font-bold text-sm hidden lg:block">
+            <i class="far fa-calendar-alt mr-2"></i> <span id="current-date"></span>
+        </div>
+        
+        <button class="bg-black text-white w-10 h-10 rounded-full flex items-center justify-center neo-shadow md:hidden">
+            <i class="fas fa-bars text-xl"></i>
+        </button>
     </nav>
 
-    <!-- Hero Section -->
-    <header id="about" class="max-w-6xl mx-auto px-4 py-20 flex flex-col md:flex-row items-center justify-between" data-aos="fade-up">
-        <div class="md:w-3/5">
-            <h2 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
-                Hi, I'm Sujal Donga. <br>
-                <span class="text-blue-600">Data Science & AI Professional</span>
-            </h2>
-            <p class="text-lg text-gray-600 mb-6">
-                B.Tech in Computer Science and Engineering with hands-on experience in Machine Learning, Exploratory Data Analysis, and LLM evaluation. Passionate about transforming complex data into actionable insights and building cutting-edge AI solutions.
-            </p>
-            <div class="flex flex-wrap gap-4 mt-6">
-                <a href="#projects" class="px-6 py-3 bg-gray-900 text-white font-semibold rounded-md hover:bg-gray-800 transition shadow-sm">View Projects</a>
-                <a href="Sujal_Donga_CV.pdf" download class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition shadow-sm flex items-center">
-                    <i class="fas fa-download mr-2"></i> Download CV
+    <!-- Main Dashboard Grid -->
+    <div id="about" class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Left Sidebar: Profile Card -->
+        <aside class="bg-white border-4 border-black rounded-2xl neo-shadow-static p-6 flex flex-col h-full">
+            <div class="flex justify-center mb-6 relative">
+                <div class="absolute -top-4 w-16 h-6 bg-white/50 backdrop-blur-sm border-2 border-gray-300 rotate-[-5deg]"></div>
+                <img src="assets/IMG_2798.jpeg" alt="Sujal Donga" class="w-32 h-32 rounded-full border-4 border-black object-cover bg-orange-200">
+            </div>
+            
+            <h2 class="text-3xl font-black text-center mb-2 italic">SUJAL DONGA</h2>
+            <div class="bg-black text-white font-mono text-xs text-center py-1 rounded-md mb-6 w-full uppercase">
+                DATA_SCIENCE_PROFESSIONAL()
+            </div>
+
+            <div class="space-y-4 mb-8 flex-grow">
+                <div>
+                    <span class="bg-[#fde047] border-2 border-black font-bold text-xs px-1">LOCATION</span>
+                    <p class="font-semibold text-sm mt-1 uppercase">Ahmedabad, Gujarat</p>
+                </div>
+                <div>
+                    <span class="bg-[#4ade80] border-2 border-black font-bold text-xs px-1">STATUS</span>
+                    <p class="font-semibold text-sm mt-1 uppercase">Open to AI & Data Roles</p>
+                </div>
+                <div>
+                    <span class="bg-[#60a5fa] border-2 border-black font-bold text-xs px-1">MISSION</span>
+                    <p class="font-semibold text-sm mt-1 uppercase">Extract. Analyze. Build.</p>
+                </div>
+            </div>
+
+            <div class="space-y-4 w-full">
+                <a href="assets/Sujal_Donga_CV.pdf" download class="block w-full bg-[#4ade80] border-4 border-black rounded-xl py-3 font-black text-center neo-shadow uppercase hover:bg-green-300 transition-colors">
+                    <i class="fas fa-download mr-2"></i> Download_Resume
                 </a>
-                <a href="mailto:Sujaldonga27@gmail.com" class="px-6 py-3 border border-gray-300 font-semibold rounded-md hover:bg-gray-100 transition flex items-center">
-                    <i class="fas fa-envelope mr-2"></i>Email Me
+                <a href="mailto:Sujaldonga27@gmail.com" class="block w-full bg-[#f87171] border-4 border-black rounded-xl py-3 font-black text-white text-center neo-shadow uppercase hover:bg-red-500 transition-colors">
+                    <i class="fas fa-envelope mr-2"></i> Contact Me
                 </a>
             </div>
+
+            <!-- Social Links -->
+            <div class="flex justify-center gap-4 mt-6 text-xl">
+                <a href="https://github.com/sdpatel5201" target="_blank" class="w-10 h-10 border-2 border-black rounded-full flex justify-center items-center neo-shadow bg-white hover:bg-gray-200 transition"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/sujal-donga-57b16326a/" target="_blank" class="w-10 h-10 border-2 border-black rounded-full flex justify-center items-center neo-shadow bg-[#60a5fa] text-white hover:bg-blue-600 transition"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank" class="w-10 h-10 border-2 border-black rounded-full flex justify-center items-center neo-shadow bg-[#4ade80] hover:bg-green-500 transition"><i class="fab fa-kaggle"></i></a>
+            </div>
+        </aside>
+
+        <!-- Right Column: Content & Terminal -->
+        <div class="lg:col-span-2 flex flex-col gap-8">
+            
+            <!-- About Me Yellow Card -->
+            <div class="bg-[#fde047] border-4 border-black rounded-2xl neo-shadow-static p-8 relative">
+                <!-- Pin decoration -->
+                <div class="absolute top-4 right-4 w-4 h-4 rounded-full bg-red-500 border-2 border-black shadow-[2px_2px_0_0_rgba(0,0,0,1)]"></div>
+                
+                <h2 class="text-4xl font-black mb-6 italic">Hi people!</h2>
+                <p class="font-semibold text-lg leading-relaxed mb-6">
+                    I am a <span class="bg-white border-2 border-black px-1 font-bold">B.Tech CSE Graduate</span>, specializing in Machine Learning, Exploratory Data Analysis, and LLM evaluation. I define myself as an <span class="bg-white border-2 border-black px-1 font-bold">AI Enthusiast</span> aspiring to build intelligent, scalable software.
+                </p>
+                <p class="font-semibold text-lg leading-relaxed mb-8">
+                    I have strong analytical skills, experience with Python and SQL, and a logical approach to problem-solving. My hands-on projects across diverse datasets have made me adaptable and eager to extract actionable insights.
+                </p>
+                
+                <!-- Skill Tags -->
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="bg-white border-2 border-black font-bold text-xs px-2 py-1 neo-shadow">Python</span>
+                    <span class="bg-white border-2 border-black font-bold text-xs px-2 py-1 neo-shadow">SQL</span>
+                    <span class="bg-white border-2 border-black font-bold text-xs px-2 py-1 neo-shadow">Machine Learning</span>
+                    <span class="bg-white border-2 border-black font-bold text-xs px-2 py-1 neo-shadow">Pandas</span>
+                    <span class="bg-white border-2 border-black font-bold text-xs px-2 py-1 neo-shadow">Power BI</span>
+                </div>
+            </div>
+
+            <!-- Interactive Terminal Window -->
+            <div id="terminal-container" class="bg-black border-4 border-black rounded-xl overflow-hidden neo-shadow-static flex-grow min-h-[300px] max-h-[400px] flex flex-col cursor-text">
+                <div class="bg-white border-b-4 border-black px-4 py-2 flex items-center justify-between sticky top-0 z-10">
+                    <div class="flex gap-2">
+                        <div class="w-3 h-3 rounded-full bg-[#f87171] border-2 border-black"></div>
+                        <div class="w-3 h-3 rounded-full bg-[#fde047] border-2 border-black"></div>
+                        <div class="w-3 h-3 rounded-full bg-[#4ade80] border-2 border-black"></div>
+                    </div>
+                    <div class="font-mono text-sm font-bold">root@sujal:~</div>
+                    <div></div>
+                </div>
+                <div id="terminal-output" class="p-4 text-[#4ade80] font-mono text-sm leading-relaxed overflow-y-auto flex-grow">
+                    <p>SujalOS v1.0.0 (tty1)</p>
+                    <p class="mb-4">Type "help" to see available commands.</p>
+                </div>
+                <div class="px-4 pb-4 flex text-[#4ade80] font-mono text-sm bg-black">
+                    <span class="text-[#60a5fa] mr-2">guest@sujal:~$</span>
+                    <input type="text" id="terminal-input" class="bg-black text-white outline-none flex-grow font-mono" autocomplete="off" spellcheck="false" autofocus>
+                </div>
+            </div>
         </div>
-        <div class="md:w-2/5 mt-10 md:mt-0 flex justify-center">
-            <!-- Decoration Image -->
-            <img src="IMG_2798.jpeg" alt="Sujal Donga" class="w-64 h-64 object-cover object-top rounded-full shadow-lg border-4 border-white transition-transform duration-500 hover:scale-110">
+    </div>
+
+    <!-- REST OF THE PAGE: Visual Sections for Projects and Experience -->
+    
+    <!-- Projects Section -->
+    <section id="projects" class="max-w-7xl mx-auto mt-20">
+        <div class="mb-8 flex items-center justify-center lg:justify-start">
+            <h2 class="text-4xl font-black italic uppercase inline-block bg-[#f87171] text-white px-4 py-2 border-4 border-black neo-shadow-static -rotate-2">
+                Featured Projects
+            </h2>
         </div>
-    </header>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project 1 -->
+            <div class="bg-white border-4 border-black rounded-2xl p-6 neo-shadow flex flex-col hover:bg-gray-50 transition-colors">
+                <div class="bg-[#c4b5fd] border-4 border-black w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-4 neo-shadow-static -mt-10 ml-auto">
+                    <i class="fas fa-dove"></i>
+                </div>
+                <h3 class="text-2xl font-black mb-3">Birdcall Recognition</h3>
+                <p class="font-semibold text-sm mb-6 flex-grow">Conducted in-depth EDA and applied audio feature engineering using LibROSA to build an accurate bird species classification system.</p>
+                <div class="border-t-4 border-black pt-4 flex gap-2">
+                    <span class="bg-[#fde047] border-2 border-black font-bold text-xs px-2 py-1">Python</span>
+                    <span class="bg-[#fde047] border-2 border-black font-bold text-xs px-2 py-1">LibROSA</span>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="bg-white border-4 border-black rounded-2xl p-6 neo-shadow flex flex-col hover:bg-gray-50 transition-colors">
+                <div class="bg-[#6ee7b7] border-4 border-black w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-4 neo-shadow-static -mt-10 ml-auto">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3 class="text-2xl font-black mb-3">Stock Prediction</h3>
+                <p class="font-semibold text-sm mb-6 flex-grow">Developed a predictive model utilizing historical market data and Linear Regression to forecast stock trends. Included extensive data preprocessing.</p>
+                <div class="border-t-4 border-black pt-4 flex gap-2">
+                    <span class="bg-[#fde047] border-2 border-black font-bold text-xs px-2 py-1">Machine Learning</span>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="bg-white border-4 border-black rounded-2xl p-6 neo-shadow flex flex-col hover:bg-gray-50 transition-colors">
+                <div class="bg-[#fca5a5] border-4 border-black w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-4 neo-shadow-static -mt-10 ml-auto">
+                    <i class="fas fa-shield-virus"></i>
+                </div>
+                <h3 class="text-2xl font-black mb-3">Malware Detection</h3>
+                <p class="font-semibold text-sm mb-6 flex-grow">Co-authored a research publication on detecting malware using a custom hybrid Machine Learning model for enhanced performance.</p>
+                <div class="border-t-4 border-black pt-4 flex gap-2">
+                    <span class="bg-[#fde047] border-2 border-black font-bold text-xs px-2 py-1">Research</span>
+                    <span class="bg-[#fde047] border-2 border-black font-bold text-xs px-2 py-1">Hybrid ML</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="py-16 bg-white" data-aos="fade-up">
-        <div class="max-w-6xl mx-auto px-4">
-            <h3 class="text-3xl font-bold mb-10 text-center">Professional Experience</h3>
-            <div class="space-y-8">
-                <!-- Role 1 -->
-                <div class="border-l-4 border-blue-600 pl-4" data-aos="fade-left">
-                    <h4 class="text-xl font-bold">AI/LLM Analyst</h4>
-                    <p class="text-gray-500 text-sm font-medium mb-2">Innodata INC. | Feb 2026 - May 2026</p>
-                    <p class="text-gray-700">Evaluated Al and Large Language Models for factual correctness, contextual relevance, and language quality. Performed prompt-response evaluation, structured annotation, and provided detailed feedback to mitigate AI hallucinations and improve overall model accuracy.</p>
-                </div>
-                <!-- Role 2 -->
-                <div class="border-l-4 border-gray-300 pl-4" data-aos="fade-right">
-                    <h4 class="text-xl font-bold">Software Development Professional</h4>
-                    <p class="text-gray-500 text-sm font-medium mb-2">Air contact Systems Pvt Ltd | July 2025 - Nov 2025</p>
-                    <p class="text-gray-700">Developed user interfaces using JavaScript and XML, while managing backend systems using Python. Coordinated across teams to deliver value additions to ongoing company projects.</p>
-                </div>
-                <!-- Role 3 -->
-                <div class="border-l-4 border-gray-300 pl-4" data-aos="fade-left">
-                    <h4 class="text-xl font-bold">PHP Developer Intern</h4>
-                    <p class="text-gray-500 text-sm font-medium mb-2">LOGINIUS INFOTECH | July 2024 - Aug 2024</p>
-                    <p class="text-gray-700">Contributed to backend web development focusing on dynamic web pages, form validations, and seamless MySQL database integrations for robust data storage and retrieval.</p>
-                </div>
-            </div>
+    <section id="experience" class="max-w-7xl mx-auto mt-24 mb-20">
+        <div class="mb-10 flex items-center justify-center lg:justify-start">
+            <h2 class="text-4xl font-black italic uppercase inline-block bg-[#4ade80] text-black px-4 py-2 border-4 border-black neo-shadow-static rotate-1">
+                Experience Timeline
+            </h2>
         </div>
-    </section>
 
-    <!-- Projects & Research Section -->
-    <section id="projects" class="py-16 bg-gray-50" data-aos="fade-up">
-        <div class="max-w-6xl mx-auto px-4">
-            <h3 class="text-3xl font-bold mb-10 text-center">Projects & Research</h3>
-            <div class="grid md:grid-cols-3 gap-8">
-                
-                <!-- Project 1 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col" data-aos="flip-left" data-aos-delay="100">
-                    <div class="p-6 flex-grow">
-                        <div class="text-blue-600 text-2xl mb-3"><i class="fas fa-dove"></i></div>
-                        <h4 class="text-xl font-bold mb-2">Birdcall Recognition Model</h4>
-                        <p class="text-gray-600 text-sm mb-4">Conducted in-depth EDA and applied audio feature engineering (MFCCs, Chroma, Spectral Centroid) using LibROSA to build an accurate bird species classification system.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded">Python</span>
-                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded">LibROSA</span>
-                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded">EDA</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col" data-aos="flip-left" data-aos-delay="200">
-                    <div class="p-6 flex-grow">
-                        <div class="text-green-600 text-2xl mb-3"><i class="fas fa-chart-line"></i></div>
-                        <h4 class="text-xl font-bold mb-2">Apple Stock Prediction</h4>
-                        <p class="text-gray-600 text-sm mb-4">Developed a predictive model utilizing historical market data and Linear Regression to forecast stock trends. Included extensive data preprocessing and visual insights.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded">Machine Learning</span>
-                            <span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded">Python</span>
-                            <span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded">Data Viz</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col" data-aos="flip-left" data-aos-delay="300">
-                    <div class="p-6 flex-grow">
-                        <div class="text-red-600 text-2xl mb-3"><i class="fas fa-shield-virus"></i></div>
-                        <h4 class="text-xl font-bold mb-2">Malware Detection Research</h4>
-                        <p class="text-gray-600 text-sm mb-4">Co-authored a research publication on detecting malware using a custom hybrid Machine Learning model that combines multiple ML techniques for enhanced performance.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-red-100 text-red-700 text-xs rounded">Research</span>
-                            <span class="px-2 py-1 bg-red-100 text-red-700 text-xs rounded">Hybrid ML</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills & Certifications -->
-    <section id="skills" class="py-16 bg-white" data-aos="fade-up">
-        <div class="max-w-6xl mx-auto px-4">
-            <h3 class="text-3xl font-bold mb-10 text-center">Technical Skills & Certifications</h3>
-            <div class="grid md:grid-cols-2 gap-12">
-                <!-- Skills -->
+        <div class="flex flex-col gap-6">
+            <!-- Experience 1 -->
+            <div class="bg-white border-4 border-black rounded-2xl p-6 md:p-8 neo-shadow flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
-                    <h4 class="text-xl font-bold mb-4 border-b pb-2">Core Technologies</h4>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full font-medium" data-aos="zoom-in">Python</span>
-                        <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full font-medium" data-aos="zoom-in">SQL (MySQL)</span>
-                        <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full font-medium" data-aos="zoom-in">R</span>
-                        <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full font-medium" data-aos="zoom-in">MongoDB</span>
-                        <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full font-medium" data-aos="zoom-in">Machine Learning</span>
-                        <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full font-medium" data-aos="zoom-in">Pandas & NumPy</span>
-                        <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full font-medium" data-aos="zoom-in">Tableau & Power BI</span>
-                        <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full font-medium" data-aos="zoom-in">Jupyter & Colab</span>
-                    </div>
+                    <h3 class="text-2xl font-black">AI/LLM Analyst</h3>
+                    <p class="font-bold text-gray-600 mt-1">Innodata INC.</p>
+                    <p class="font-semibold text-sm mt-3 max-w-2xl">Evaluated AI and Large Language Models for factual correctness, contextual relevance, and language quality. Provided detailed feedback to mitigate AI hallucinations.</p>
                 </div>
-                <!-- Certifications -->
-                <div data-aos="fade-left">
-                    <h4 class="text-xl font-bold mb-4 border-b pb-2">Professional Certificates</h4>
-                    <ul class="space-y-3 text-gray-700">
-                        <li><i class="fas fa-certificate text-blue-500 mr-2"></i> Google Data Analytics Professional Certificate</li>
-                        <li><i class="fas fa-certificate text-blue-500 mr-2"></i> IBM Data Science Professional Certificate</li>
-                        <li><i class="fas fa-laptop-code text-gray-500 mr-2"></i> Accenture, Tata & BCG Data Analytics Job Simulations (Forage)</li>
-                    </ul>
+                <div class="bg-black text-white font-mono font-bold px-4 py-2 border-2 border-black whitespace-nowrap self-start md:self-auto neo-shadow-static">
+                    Feb 2026 - May 2026
+                </div>
+            </div>
+
+            <!-- Experience 2 -->
+            <div class="bg-white border-4 border-black rounded-2xl p-6 md:p-8 neo-shadow flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div>
+                    <h3 class="text-2xl font-black">Software Dev Professional</h3>
+                    <p class="font-bold text-gray-600 mt-1">Air contact Systems Pvt Ltd</p>
+                    <p class="font-semibold text-sm mt-3 max-w-2xl">Developed user interfaces using JavaScript and XML, while managing backend systems using Python. Coordinated across teams to deliver value additions.</p>
+                </div>
+                <div class="bg-black text-white font-mono font-bold px-4 py-2 border-2 border-black whitespace-nowrap self-start md:self-auto neo-shadow-static">
+                    Jul 2025 - Nov 2025
+                </div>
+            </div>
+
+            <!-- Experience 3 -->
+            <div class="bg-white border-4 border-black rounded-2xl p-6 md:p-8 neo-shadow flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div>
+                    <h3 class="text-2xl font-black">PHP Developer Intern</h3>
+                    <p class="font-bold text-gray-600 mt-1">LOGINIUS INFOTECH</p>
+                    <p class="font-semibold text-sm mt-3 max-w-2xl">Contributed to backend web development focusing on dynamic web pages, form validations, and seamless MySQL database integrations.</p>
+                </div>
+                <div class="bg-black text-white font-mono font-bold px-4 py-2 border-2 border-black whitespace-nowrap self-start md:self-auto neo-shadow-static">
+                    Jul 2024 - Aug 2024
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="bg-gray-900 text-white py-16" data-aos="fade-up">
-        <div class="max-w-5xl mx-auto px-4 text-center">
-            <h3 class="text-3xl font-bold mb-6">Let's Connect</h3>
-            <p class="text-gray-400 mb-8 text-lg">I am currently looking for roles in Data Sciences and AI. Feel free to reach out for opportunities or collaborations.</p>
-            
-            <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-10">
-                <a href="mailto:Sujaldonga27@gmail.com" class="flex items-center text-gray-300 hover:text-white transition transform hover:scale-105">
-                    <i class="fas fa-envelope text-2xl mr-3 text-blue-500"></i> Sujaldonga27@gmail.com
-                </a>
-                <a href="tel:+919099058464" class="flex items-center text-gray-300 hover:text-white transition transform hover:scale-105">
-                    <i class="fas fa-phone text-2xl mr-3 text-green-500"></i> +91 9099058464
-                </a>
-                <div class="flex items-center text-gray-300">
-                    <i class="fas fa-map-marker-alt text-2xl mr-3 text-red-500"></i> Ahmedabad-GJ, India
-                </div>
-            </div>
-
-            <!-- Social/Coding Footer Buttons -->
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="https://www.linkedin.com/in/sujal-donga-57b16326a/" target="_blank" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition transform hover:scale-110" title="LinkedIn">
-                    <i class="fab fa-linkedin-in text-xl"></i>
-                </a>
-                <a href="https://github.com/sdpatel5201" target="_blank" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition transform hover:scale-110" title="GitHub">
-                    <i class="fab fa-github text-xl"></i>
-                </a>
-                <a href="#" target="_blank" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-400 transition transform hover:scale-110" title="Kaggle">
-                    <i class="fab fa-kaggle text-xl"></i>
-                </a>
-                <a href="#" target="_blank" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 transition transform hover:scale-110" title="LeetCode">
-                    <i class="fas fa-code text-xl"></i>
-                </a>
-                <a href="#" target="_blank" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-500 transition transform hover:scale-110" title="ResearchGate">
-                    <i class="fab fa-researchgate text-xl"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-gray-950 text-gray-500 text-center py-6 border-t border-gray-800 text-sm">
-        <p>&copy; 2026 Sujal Donga. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="border-t-4 border-black py-8 mt-16 text-center font-bold">
+        <p>Built with 💻 and ☕ by Sujal Donga © 2026</p>
     </footer>
 
-    <!-- Animate On Scroll (AOS) JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Initialize AOS animations
-        AOS.init({
-            duration: 1000, 
-            once: true,      
-            easing: 'ease-out-quad', 
-        });
-    </script>
-
+    <!-- Custom JavaScript (Make sure your js/main.js file is saved!) -->
+    <script src="js/main.js"></script>
 </body>
 </html>

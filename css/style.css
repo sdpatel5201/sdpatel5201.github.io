@@ -1,0 +1,43 @@
+/* Typography Base */
+body { 
+    font-family: 'Inter', sans-serif; 
+}
+.font-mono { 
+    font-family: 'Space Mono', monospace; 
+}
+.font-black { 
+    font-weight: 900; 
+}
+
+/* Neo-brutalist Shadows and Hover States */
+.neo-shadow {
+    box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
+    transition: all 0.2s ease-in-out;
+}
+
+.neo-shadow:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.neo-shadow:active {
+    transform: translate(4px, 4px);
+    box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.neo-shadow-static {
+    box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+}
+
+/* Custom Scrollbar for Terminal */
+::-webkit-scrollbar { 
+    width: 10px; 
+}
+::-webkit-scrollbar-track { 
+    background: #000; 
+    border-left: 2px solid #333; 
+}
+::-webkit-scrollbar-thumb { 
+    background: #fff; 
+    border: 2px solid #000; 
+}
