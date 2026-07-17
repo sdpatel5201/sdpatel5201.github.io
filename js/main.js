@@ -179,7 +179,7 @@ if (canvas) {
 
         if (currentMode === 'draw') {
             ctx.globalCompositeOperation = 'source-over';
-            ctx.strokeStyle = '#ffffff'; 
+            ctx.strokeStyle = '#000000'; // Changed to Black ink for Whiteboard
             ctx.lineWidth = 4;
         } else {
             ctx.globalCompositeOperation = 'destination-out';
