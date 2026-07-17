@@ -41,3 +41,114 @@ body {
     background: #fff; 
     border: 2px solid #000; 
 }
+
+/* --- NEW NEO-BRUTALIST ELEMENTS --- */
+
+/* Scrolling Marquee */
+.marquee-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+    background-color: #fde047; /* Yellow */
+    padding: 0.5rem 0;
+    display: flex;
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: marquee 20s linear infinite;
+    font-weight: 900;
+    font-size: 1.25rem;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Pill Headers */
+.pill-header {
+    display: inline-block;
+    background-color: #fde047;
+    border: 4px solid black;
+    border-radius: 9999px; /* Full pill shape */
+    padding: 0.5rem 2rem;
+    font-size: 2rem;
+    font-weight: 900;
+    font-style: italic;
+    box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
+    margin-bottom: 2rem;
+}
+
+/* Drawing Canvas Container */
+.canvas-container {
+    background-color: #1a1a1a;
+    border: 4px solid black;
+    border-radius: 1rem;
+    box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+    position: relative;
+    overflow: hidden;
+    cursor: crosshair;
+}
+
+.canvas-toolbar {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.canvas-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 0.25rem;
+    border: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.canvas-btn.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: white;
+}
+
+/* Mac OS Window Dots */
+.mac-dots {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+.mac-dots div {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+/* Floating Date Tooltip for Experience */
+.floating-badge {
+    position: absolute;
+    top: -1.5rem;
+    right: -1.5rem;
+    background-color: #fde047;
+    border: 3px solid black;
+    padding: 0.5rem 1rem;
+    font-weight: 700;
+    font-size: 0.875rem;
+    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+    z-index: 10;
+    transform: rotate(2deg);
+}
